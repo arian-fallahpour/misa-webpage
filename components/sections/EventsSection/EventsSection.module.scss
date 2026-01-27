@@ -1,0 +1,138 @@
+section.EventsSection {
+  padding-top: 15rem;
+}
+
+.Shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 30rem;
+  background: var(--color-primary);
+  border-radius: 50%;
+  opacity: 0.1;
+  transform: translate(50%, -50%);
+  z-index: -1;
+}
+
+.Years {
+  list-style: none;
+  display: grid;
+  gap: var(--width-regular);
+}
+
+.Year {
+  &:nth-child(odd) :global(.header.header-subsection) {
+    color: var(--color-secondary);
+  }
+
+  &:nth-child(even) :global(.header.header-subsection) {
+    color: var(--color-primary);
+  }
+
+  &Header {
+  }
+
+  &Events {
+    display: grid;
+  }
+}
+
+.Events {
+  display: flex;
+  gap: var(--width-regular);
+
+  white-space: nowrap;
+  overflow-x: scroll;
+
+  list-style: none;
+  padding-bottom: var(--width-small);
+  margin-bottom: calc(var(--width-small) * -1);
+}
+
+.Event {
+  border-radius: var(--border-radius-regular);
+  overflow: hidden;
+  position: relative;
+  width: 50rem;
+  height: 30rem;
+  flex: 0 0 auto;
+  display: inline-block;
+  background: black;
+
+  transition: filter 0.3s ease;
+
+  &:hover,
+  &:focus {
+    filter: brightness(1.2) contrast(0.9);
+  }
+
+  &:hover > &Shine,
+  &:focus > &Shine {
+    left: 150%;
+  }
+  &:hover img,
+  &:focus img {
+    scale: 1.1;
+  }
+
+  & img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    scale: 1.01;
+
+    transition: scale 0.5s ease;
+  }
+
+  &Gradient {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0));
+  }
+
+  &Shine {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    pointer-events: none;
+    filter: blur(30px);
+
+    left: -100%;
+    transition: left 0.7s ease;
+  }
+
+  &Link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--width-regular);
+
+    display: grid;
+    align-content: flex-end;
+  }
+
+  &NameFarsi {
+    color: rgb(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: 1rem;
+    right: var(--width-regular);
+    font-size: 10rem;
+    font-family: var(--font-family-noto);
+  }
+}

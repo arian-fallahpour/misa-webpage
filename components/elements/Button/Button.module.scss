@@ -1,0 +1,58 @@
+.Button {
+  padding: 0.65rem 1.75rem;
+  border: none;
+  display: block;
+  background: var(--color-primary);
+  color: var(--color-title-light);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-small);
+
+  border-radius: 100rem;
+
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  transition: all 0.2s ease;
+
+  & svg {
+    font-size: 1.25rem;
+  }
+
+  &:hover,
+  &:focus {
+    gap: 1.5rem;
+  }
+
+  &--nav {
+    background: transparent;
+    color: rgba(white, 0.6);
+    border-radius: none;
+
+    &:hover,
+    &:focus {
+      color: white;
+    }
+  }
+
+  &--glass {
+    background: transparent;
+
+    &:hover,
+    &:focus {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &--text {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    color: var(--color-primary);
+  }
+
+  &--light {
+    background-color: var(--color-background-secondary);
+    color: var(--color-primary);
+  }
+}

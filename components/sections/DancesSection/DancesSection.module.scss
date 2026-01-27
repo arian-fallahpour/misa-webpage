@@ -1,0 +1,44 @@
+@use "@/sass/abstracts/mixins" as *;
+
+section.DancesSection {
+  @include max-width();
+
+  & :global(.header-section) {
+    color: var(--color-primary);
+  }
+}
+
+.Header {
+  text-align: center;
+  max-width: 60rem;
+
+  display: grid;
+  justify-content: center;
+  justify-self: center;
+}
+
+.Content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--width-large);
+  justify-content: center;
+}
+
+.Performance {
+  display: grid;
+  text-align: center;
+  gap: var(--width-tiny);
+
+  &:nth-child(odd) :global(.header) {
+    color: var(--color-secondary);
+  }
+
+  &:nth-child(even) :global(.header) {
+    color: var(--color-primary);
+  }
+}
+
+.Player {
+  border-radius: var(--border-radius-regular);
+  overflow: hidden;
+}

@@ -1,0 +1,19 @@
+// MEDIA QUERY MANAGER
+@mixin respond($breakpoint, $less: true) {
+  @if $less == true {
+    @media only screen and (max-width: $breakpoint) {
+      @content;
+    }
+  } @else {
+    @media only screen and (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin max-width($max-width: 130rem) {
+  max-width: $max-width;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

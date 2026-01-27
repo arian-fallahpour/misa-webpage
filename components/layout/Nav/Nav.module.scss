@@ -1,0 +1,41 @@
+.Nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  padding: var(--width-small);
+}
+
+.Left {
+  display: flex;
+  gap: var(--width-regular);
+}
+
+.Logo {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+}
+
+.List {
+  list-style: none;
+
+  display: flex;
+  // gap: var(--width-small);
+  align-items: center;
+}
+
+.Item {
+}
+
+.Link {
+}
+
+.Right {
+  display: flex;
+  align-items: center;
+}

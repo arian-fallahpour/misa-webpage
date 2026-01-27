@@ -1,0 +1,27 @@
+.Header {
+  max-width: 70rem;
+  text-align: center;
+  position: relative;
+  padding: var(--width-small) 0;
+
+  display: grid;
+  justify-self: center;
+}
+
+.Line {
+  width: 5rem;
+  height: 4px;
+  background-color: var(--color-secondary);
+
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+}
+
+.LineTop {
+  top: 0;
+}
+
+.LineBottom {
+  bottom: 0;
+}

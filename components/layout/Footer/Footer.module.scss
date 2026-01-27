@@ -1,0 +1,29 @@
+.Footer {
+  padding: var(--width-huge) var(--width-large);
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  display: grid;
+  gap: var(--width-regular);
+  position: relative;
+
+  & img {
+    object-fit: cover;
+  }
+
+  border-top: 5px solid var(--color-secondary);
+
+  &Content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &Contact {
+    list-style: none;
+    display: flex;
+    gap: var(--width-regular);
+  }
+
+  &Info {
+    display: grid;
+    gap: 0.5rem;
+  }
+}

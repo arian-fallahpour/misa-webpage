@@ -1,0 +1,154 @@
+@use "@/sass/abstracts/mixins" as *;
+
+section.AnnouncementsSection {
+  @include max-width();
+}
+
+.Main {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: var(--width-large);
+}
+
+.Content {
+  display: grid;
+  gap: var(--width-small);
+  align-content: start;
+}
+
+.Links {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: var(--width-small);
+}
+
+.Link {
+  padding: var(--width-small);
+  background-color: var(--color-primary);
+  border-radius: var(--width-small);
+  color: var(--color-text-light);
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: flex-start;
+  gap: var(--width-small);
+  font-size: var(--font-size-small);
+
+  &Icon {
+    justify-self: center;
+    font-size: 2.5rem;
+  }
+}
+
+.Calendar {
+  width: 100%;
+  margin: 0 auto;
+  background: var(--color-white, #fff);
+  border-radius: var(--border-radius-large);
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  overflow: hidden;
+
+  transform: perspective(1000px) rotateY(-5deg);
+  transform-origin: right center;
+
+  transition:
+    scale 0.3s ease-in-out,
+    translate 0.3s ease-in-out;
+
+  &:hover {
+    scale: 1.02;
+    translate: 7px -1rem;
+  }
+
+  &Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    color: var(--color-primary);
+  }
+
+  &Nav {
+    height: 4rem;
+    width: 4rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+  }
+}
+
+.Weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  background-color: var(--color-border);
+  padding: 1px 0;
+  gap: 1px;
+}
+
+.Weekday {
+  padding: 1rem;
+  font-size: var(--font-size-small);
+  text-align: center;
+  font-weight: var(--font-weight-semibold);
+  background: var(--color-background-secondary);
+}
+
+$day-padding: 0.5rem;
+
+.Days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 1px;
+  background-color: var(--color-border);
+
+  &:last-child > .Day:nth-last-child(7) > .Event {
+    border-bottom-left-radius: calc(var(--border-radius-large) - #{$day-padding}) !important;
+  }
+  &:last-child > .Day:last-child > .Event {
+    border-bottom-right-radius: calc(var(--border-radius-large) - #{$day-padding}) !important;
+  }
+}
+
+.Day {
+  width: auto;
+  aspect-ratio: 1;
+  background-color: var(--color-background-secondary);
+  position: relative;
+  padding: $day-padding;
+
+  &.empty {
+    border: none;
+  }
+
+  &Number {
+    position: absolute;
+    right: calc(2.5 * #{$day-padding});
+    top: calc(1.5 * #{$day-padding});
+    font-size: var(--font-size-small);
+    color: var(--color-text);
+    font-weight: var(--font-weight-regular);
+
+    &.light {
+      color: var(--color-text-light);
+    }
+  }
+}
+
+.Event {
+  background-color: var(--color-primary);
+  border-radius: 1rem;
+  font-size: calc(var(--font-size-small) - 0.2rem);
+  height: 100%;
+  padding: $day-padding;
+  color: var(--color-text-light);
+
+  display: grid;
+  align-content: center;
+  text-align: center;
+}

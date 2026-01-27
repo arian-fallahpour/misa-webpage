@@ -1,0 +1,73 @@
+body,
+input,
+input::placeholder,
+label,
+button,
+textarea,
+select {
+  line-height: 1.5;
+  font-size: var(--font-size-regular);
+  color: var(--color-text);
+}
+
+*,
+* * {
+  font-family: var(--font-family-helvetica), sans-serif;
+}
+
+.header {
+  text-transform: capitalize;
+  line-height: 1.2;
+  color: var(--color-title);
+  font-weight: var(--font-weight-semibold);
+
+  &.text-light {
+    color: var(--color-title-light);
+  }
+}
+
+.header-title {
+  font-size: 5rem;
+  font-weight: var(--font-weight-superbold);
+}
+
+.header-section {
+  font-size: 4rem;
+  font-weight: var(--font-weight-superbold);
+}
+
+.header-subsection {
+  font-weight: var(--font-weight-superbold);
+  font-size: 2.75rem;
+}
+
+.header-card {
+  font-size: 2.25rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.header-text {
+  font-size: var(--font-size-regular);
+}
+
+.subtitle {
+  font-size: 2.25rem;
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.paragraph,
+.ul,
+.li,
+.caption {
+  font-size: var(--font-size-regular);
+  color: var(--color-text);
+
+  &.text-light {
+    color: var(--color-text-light);
+  }
+}
+
+.ul {
+  padding-inline-start: 2rem;
+}

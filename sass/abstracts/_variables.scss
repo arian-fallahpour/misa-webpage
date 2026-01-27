@@ -1,0 +1,63 @@
+:root {
+  // rgb(237, 237, 224);
+
+  --color-background: #fcf8f0;
+  --color-background-rgb: 19, 20, 31;
+
+  --color-background-secondary: #ffffff;
+  --color-background-secondary-rgb: 252, 248, 240;
+
+  // #2A6CAA navy
+  // #EBB52A yellow
+  // #67BDC8 turquoise
+
+  --color-primary: #175b8d;
+  --color-primary-rgb: 42, 108, 170;
+  --color-secondary: #ebb52a;
+  --color-secondary-rgb: 235, 181, 42;
+  --color-tertiary: #4db3c4;
+  --color-tertiary-rgb: 42, 108, 170;
+
+  --color-border: rgb(237, 237, 237);
+
+  --color-success: #00be36;
+  --color-success-border: #1ef75b;
+  --color-success-text: #97ffb4;
+
+  --color-error: #ff5959;
+  --color-error-border: #ff9595;
+  --color-error-text: #ffdede;
+
+  --color-title: #000000;
+  --color-text: #1f1f1f;
+  --color-title-light: rgb(252, 248, 240);
+  --color-text-light: rgba(252, 248, 240, 0.8);
+
+  --font-size-large: 2.25rem;
+  --font-size-regular: 1.75rem;
+  --font-size-small: 1.5rem;
+  --font-size-xsmall: 0.75rem;
+
+  --border-width: 1px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 400;
+  --font-weight-semibold: 700;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 700;
+  --font-weight-superbold: 700;
+
+  --padding-input-vertical: 0.9rem;
+  --padding-input-horizontal: 2.25rem;
+  --padding-button-vertical: 1rem;
+  --padding-button-horizontal: 2.25rem;
+
+  --width-tiny: 1rem;
+  --width-small: 1.5rem;
+  --width-regular: 3rem;
+  --width-large: 4.5rem;
+  --width-huge: 6rem;
+
+  --border-radius-large: 3rem;
+  --border-radius-regular: 2rem;
+}

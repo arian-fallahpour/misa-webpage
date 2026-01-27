@@ -1,0 +1,27 @@
+.List {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  list-style: none;
+}
+
+.Item {
+  font-size: var(--font-size-large);
+  text-align: center;
+
+  &:nth-child(4n) {
+    color: var(--color-primary);
+  }
+
+  &:nth-child(4n + 1) {
+    color: var(--color-secondary);
+  }
+
+  &:nth-child(4n + 2) {
+    color: var(--color-tertiary);
+  }
+
+  &:nth-child(4n + 3) {
+    color: var(--color-secondary);
+  }
+}

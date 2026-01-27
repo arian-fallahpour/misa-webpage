@@ -1,0 +1,72 @@
+@use "@/sass/abstracts/mixins" as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  font-family: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: calc(25% + 0.4vw);
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+
+  @include respond(1200px) {
+    font-size: 56.25%;
+  }
+
+  // 8px
+  @include respond(900px) {
+    font-size: 50%;
+  }
+
+  @include respond(1920px, false) {
+    font-size: calc(15% + 0.55vw);
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+input,
+textarea {
+  margin: 0;
+  min-width: 0;
+}
+
+*:focus-within {
+  outline: none;
+  // outline: 0.2rem solid rgba(255, 255, 255, 0.5);
+  // outline-offset: 0.5rem;
+}
+
+*::selection {
+  // background-color: var(--c-orange);
+  // color: var(--txt-title);
+}
