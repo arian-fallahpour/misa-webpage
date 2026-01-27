@@ -1,0 +1,27 @@
+@import "./styles/components/header.scss";
+@import "./styles/components/homePageHeader.scss";
+@import "./styles/components/homePageContent.scss";
+@import "./styles/components/footer.scss";
+@import "./styles/pages/eventPage.scss";
+@import "./styles/components/event.scss";
+@import "./styles/components/eventsContainer.scss";
+@import "./styles/pages/teamPage.scss";
+@import "./styles/components/profile.scss";
+@import "./styles/components/baharContainer.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap");
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

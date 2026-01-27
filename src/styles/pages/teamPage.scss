@@ -1,0 +1,61 @@
+.team-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    text-align: center;
+    @media (max-width: 900px) {
+      font-size: 32px;
+      margin-top: 20px;
+    }
+  }
+
+  h5 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    padding: 15px;
+    margin: 0px;
+
+    @media (max-width: 900px) {
+      font-size: 22px;
+    }
+  }
+
+  &-desc {
+    max-width: 1200px;
+    text-align: center;
+  }
+
+  &-profiles {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+  }
+
+  &-alum {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    justify-content: center;
+
+    &-name {
+      width: 300px;
+      font-size: 24px;
+      text-align: center;
+      margin: 10px;
+
+      @media (max-width: 900px) {
+        font-size: 22px;
+      }
+    }
+  }
+}

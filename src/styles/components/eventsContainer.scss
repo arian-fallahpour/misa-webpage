@@ -1,0 +1,21 @@
+.events-container {
+  display: flex;
+  flex-direction: column;
+
+  &-title {
+    padding-left: 20px;
+    font-size: 28px;
+    font-family: "Times New Roman", Times, serif;
+    @media (max-width: 900px) {
+      margin-top: 30px;
+    }
+  }
+
+  &-events {
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: 710px) {
+      justify-content: center !important;
+    }
+  }
+}
