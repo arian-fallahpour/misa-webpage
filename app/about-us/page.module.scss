@@ -6,12 +6,12 @@
   left: 0;
   position: relative;
 
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: rgba(black, 0.3);
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 
   & > img {
     object-fit: cover;
     object-position: center 100%;
-    opacity: 0.5;
+    opacity: 0.75;
   }
 }

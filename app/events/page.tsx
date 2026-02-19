@@ -7,10 +7,10 @@ import DancesSection from "@/components/sections/DancesSection/DancesSection";
 export default function EventsPage() {
   return (
     <Page>
-      <span className={classes.Background1} />
-      <div className={classes.Background2}>
+      <div className={classes.Image}>
         <Image src="/images/events/header.jpeg" alt="board game" fill />
       </div>
+      <div className={classes.Overlay}></div>
       <EventsSection />
       <DancesSection />
     </Page>

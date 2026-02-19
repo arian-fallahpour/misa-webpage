@@ -1,0 +1,17 @@
+$radius: 10px; /* control the radius */
+
+.Stamp {
+  padding: $radius;
+  background: #b3b39c;
+  mask:
+    radial-gradient(50% 50%, #0000 66%, #000 67%) round #{$radius} #{$radius} / calc(2 * #{$radius})
+      calc(2 * #{$radius}),
+    conic-gradient(#000 0 0) content-box;
+}
+
+.Content {
+  margin: -$radius;
+  border: calc($radius + 5px) solid white;
+  position: relative;
+  height: calc(100% + 2 * #{$radius});
+}

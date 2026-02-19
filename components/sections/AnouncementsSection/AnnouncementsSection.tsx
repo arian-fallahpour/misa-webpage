@@ -11,6 +11,7 @@ import calendarData from "@/data/calendar-data";
 import Link from "next/link";
 import FormIcon from "@/components/icons/FormIcon";
 import SocialIcon from "@/components/icons/SocialIcon";
+import Image from "next/image";
 
 const links = [
   {
@@ -46,6 +47,7 @@ const AnnouncementsSection = () => {
         <h1 className="header header-section">Announcements</h1>
         <p className="paragraph">Here&apos;s what we&apos;ve been up to!</p>
       </StyledHeader>
+
       <div className={classes.Main}>
         <div className={classes.Content}>
           <h2 className="header header-card text-center">Important Links</h2>
@@ -59,21 +61,25 @@ const AnnouncementsSection = () => {
           </div>
         </div>
         <div className={classes.Calendar}>
-          <div className={classes.CalendarHeader}>
-            <h3 className="header header-card">
-              {calendarData.months[month]} {year}
-            </h3>
-          </div>
+          {/* <Image src="/images/map.jpg" alt="Map" className={classes.Image} fill /> */}
 
-          <div className={classes.Weekdays}>
-            {calendarData.weekdays.map((day) => (
-              <div key={day} className={classes.Weekday}>
-                {day}
-              </div>
-            ))}
-          </div>
+          <div className={classes.CalendarContent}>
+            <div className={classes.CalendarHeader}>
+              <h3 className="header header-card">
+                {calendarData.months[month]} {year}
+              </h3>
+            </div>
 
-          <CalendarDays />
+            <div className={classes.Weekdays}>
+              {calendarData.weekdays.map((day) => (
+                <div key={day} className={classes.Weekday}>
+                  {day}
+                </div>
+              ))}
+            </div>
+
+            <CalendarDays />
+          </div>
         </div>
       </div>
     </Section>

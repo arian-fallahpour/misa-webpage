@@ -33,6 +33,17 @@ const helvetica = localFont({
   ],
 });
 
+const fancy = localFont({
+  variable: "--font-family-fancy",
+  src: [
+    {
+      path: "../public/fonts/Fancy.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
+
 const noto = localFont({
   variable: "--font-family-noto",
   src: [
@@ -56,7 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={join(helvetica.variable, noto.variable)}>
+      <body className={join(helvetica.variable, noto.variable, fancy.variable)}>
         <Nav />
         {children}
         <Footer />

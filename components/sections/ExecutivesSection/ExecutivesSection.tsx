@@ -5,6 +5,7 @@ import StyledHeader from "@/components/elements/StyledHeader/StyledHeader";
 
 import teamData from "@/data/team-data";
 import { join } from "@/utils/helper-client";
+import Stamp from "@/components/elements/Stamp/Stamp";
 
 const Executive = ({
   name,
@@ -17,12 +18,11 @@ const Executive = ({
 }) => {
   return (
     <li className={classes.Executive}>
-      <span className={classes.ExecutivePattern} />
       <div className={classes.ExecutiveContent}>
-        <div className={classes.ExecutiveImage}>
+        <Stamp className={classes.ExecutiveStamp} innerClassName={classes.ExecutiveStampInner}>
           <Image src={imageSrc || "/images/team/blank.jpg"} alt={name} fill />
-        </div>
-        <div className={join(classes.ExecutiveName, "header-card")}>{name}</div>
+          <div className={join(classes.ExecutiveName, "header-card")}>{name}</div>
+        </Stamp>
         <div className={classes.ExecutiveRole}>{role}</div>
       </div>
     </li>

@@ -7,10 +7,11 @@ import Image from "next/image";
 export default function OurTeamPage() {
   return (
     <Page>
-      <span className={classes.Background1} />
-      <div className={classes.Background2}>
+      <span className={classes.Background} />
+      <div className={classes.Image}>
         <Image src="/images/team/header.jpg" alt="patterns" fill />
       </div>
+      <div className={classes.Overlay}></div>
       <ExecutivesSection />
       <AlumniSection />
     </Page>

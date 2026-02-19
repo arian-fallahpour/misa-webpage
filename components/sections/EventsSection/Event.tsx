@@ -17,6 +17,7 @@ const Event = ({ name, nameFarsi, imageSrc, href }: EventType) => {
       <Image src={imageSrc} alt={name} fill />
       <div className={classes.EventGradient} />
       <div className={classes.EventShine} />
+      <div className={classes.EventBorder}></div>
 
       {href ? (
         <Link className={classes.EventLink} href={href}>

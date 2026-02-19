@@ -1,5 +1,4 @@
 import Section from "@/components/elements/Section/Section";
-import React from "react";
 import classes from "./AboutUsSection.module.scss";
 import Image from "next/image";
 import Button from "@/components/elements/Button/Button";
@@ -7,6 +6,7 @@ import infoData from "@/data/info-data";
 import RightArrowIcon from "@/components/icons/RightArrowIcon";
 import CalendarIcon from "@/components/icons/CalendarIcon";
 import ExternalIcon from "@/components/icons/ExternalIcon";
+import Stamp from "@/components/elements/Stamp/Stamp";
 
 const AboutUsSection = () => {
   return (
@@ -24,7 +24,7 @@ const AboutUsSection = () => {
             understanding and appreciation of Persian traditions, history, and arts.
           </p>
           <p className="paragraph margin-bottom-auto">
-            Whether you&apos;re of Persian descent or simply interested in learning more about this
+            Whether you&apos;re of Persian descent or simply interested in learning more about our
             vibrant culture, MISA welcomes you to join us in our mission to create a diverse and
             inclusive community at McMaster University.
           </p>
@@ -41,22 +41,22 @@ const AboutUsSection = () => {
         </div>
       </div>
       <div className={classes.Right}>
-        <div className={classes.Image}>
+        <Stamp className={classes.Image}>
           <Image src="/images/join/join-1.png" alt="join us" fill />
-        </div>
-        <div className={classes.Image}>
+        </Stamp>
+        <Stamp className={classes.Image}>
           <Image src="/images/join/join-2.png" alt="join us" fill />
-        </div>
-        <div className={classes.Image}>
+        </Stamp>
+        <Stamp className={classes.Image}>
           <Image src="/images/join/join-3.png" alt="join us" fill />
-        </div>
+        </Stamp>
       </div>
 
       <div className={classes.Join}>
         <div className={classes.JoinLeft}>
-          <div className={classes.JoinImage}>
+          <Stamp className={classes.JoinImage}>
             <Image src="/images/join/join-4.jpg" alt="join us" fill />
-          </div>
+          </Stamp>
           <div className={classes.JoinText}>
             <Image src="/images/join/join-5.png" alt="join us" fill />
           </div>

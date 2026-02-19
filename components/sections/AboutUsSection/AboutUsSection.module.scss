@@ -8,6 +8,7 @@ section.AboutUsSection {
   grid-template-columns: repeat(2, 1fr);
 
   $bleed: 15rem;
+
   margin-top: -$bleed;
   padding-top: calc(#{$bleed} + var(--width-large));
   padding-bottom: calc(2 * var(--width-large));
@@ -68,23 +69,26 @@ section.AboutUsSection {
   $radius: 10px; /* control the radius */
   padding: $radius;
   background: #b3b39c;
-  mask: radial-gradient(50% 50%, #0000 66%, #000 67%) round #{$radius} #{$radius} /
-      calc(2 * #{$radius}) calc(2 * #{$radius}),
+  mask:
+    radial-gradient(50% 50%, #0000 66%, #000 67%) round #{$radius} #{$radius} / calc(2 * #{$radius})
+      calc(2 * #{$radius}),
     conic-gradient(#000 0 0) content-box;
 
   // Stamp-like border using clip-path and mask
 
-  transition: scale 0.2s ease-in-out, rotate 0.2s ease-in-out;
+  transition:
+    scale 0.2s ease-in-out,
+    rotate 0.2s ease-in-out;
 
   &:hover {
     scale: 1.1;
     z-index: 11;
   }
 
-  & > img {
+  & img {
     object-fit: cover;
-    scale: 1.1;
-    border: 25px solid white;
+    // scale: 1.1;
+    // border: 25px solid white;
   }
 
   &:nth-of-type(1) {
@@ -133,21 +137,13 @@ section.AboutUsSection {
 
   &Image {
     position: relative;
-    width: 40rem;
-    height: 40rem;
-
-    $radius: 10px; /* control the radius */
-    padding: $radius;
-    background: #b3b39c;
-    mask: radial-gradient(50% 50%, #0000 66%, #000 67%) round #{$radius} #{$radius} /
-        calc(2 * #{$radius}) calc(2 * #{$radius}),
-      conic-gradient(#000 0 0) content-box;
+    width: 35rem;
+    height: 35rem;
 
     rotate: -6deg;
 
     & img {
       object-fit: cover;
-      border: 15px solid white;
     }
   }
 

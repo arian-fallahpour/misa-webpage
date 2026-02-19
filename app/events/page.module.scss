@@ -1,4 +1,4 @@
-.Background1 {
+.Background {
   display: block;
   position: absolute;
   width: 100%;
@@ -18,7 +18,8 @@
   );
 }
 
-.Background2 {
+.Image,
+.Overlay {
   display: block;
   position: absolute;
 
@@ -27,11 +28,13 @@
   top: 0;
   left: 0;
 
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 
   & > img {
     object-fit: cover;
-    opacity: 0.5;
   }
+}
+
+.Overlay {
+  background: rgba(black, 0.6);
 }

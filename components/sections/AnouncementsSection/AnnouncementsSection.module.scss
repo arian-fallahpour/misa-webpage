@@ -14,6 +14,8 @@ section.AnnouncementsSection {
   display: grid;
   gap: var(--width-small);
   align-content: start;
+
+  max-width: 37.5rem;
 }
 
 .Links {
@@ -25,15 +27,20 @@ section.AnnouncementsSection {
 
 .Link {
   padding: var(--width-small);
-  background-color: var(--color-primary);
-  border-radius: var(--width-small);
-  color: var(--color-text-light);
 
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: flex-start;
   gap: var(--width-small);
   font-size: var(--font-size-small);
+  border: 3px double rgba(black, 0.4);
+
+  transition: scale 0.2s ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    scale: 1.02;
+  }
 
   &Icon {
     justify-self: center;
@@ -44,51 +51,40 @@ section.AnnouncementsSection {
 .Calendar {
   width: 100%;
   margin: 0 auto;
-  background: var(--color-white, #fff);
-  border-radius: var(--border-radius-large);
-  box-shadow:
-    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   overflow: hidden;
+  position: relative;
+  align-self: center;
+  border: 1px solid gold;
+  padding: 2px;
 
-  transform: perspective(1000px) rotateY(-5deg);
-  transform-origin: right center;
-
-  transition:
-    scale 0.3s ease-in-out,
-    translate 0.3s ease-in-out;
-
-  &:hover {
-    scale: 1.02;
-    translate: 7px -1rem;
+  &Content {
+    background-color: var(--color-background-secondary);
+    padding: var(--width-tiny);
+    padding-top: var(--width-small);
+    position: relative;
   }
 
   &Header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem 2rem;
-    color: var(--color-primary);
+    position: relative;
+    padding-bottom: var(--width-small);
   }
+}
 
-  &Nav {
-    height: 4rem;
-    width: 4rem;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-  }
+.Image {
+  opacity: 0.5;
 }
 
 .Weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-
-  background-color: var(--color-border);
   padding: 1px 0;
   gap: 1px;
+  position: relative;
+  border-bottom: 1px solid rgba(black, 0.1);
+  border-top: 1px solid rgba(black, 0.1);
 }
 
 .Weekday {
@@ -96,7 +92,10 @@ section.AnnouncementsSection {
   font-size: var(--font-size-small);
   text-align: center;
   font-weight: var(--font-weight-semibold);
-  background: var(--color-background-secondary);
+
+  &:not(:nth-child(7n + 1)) {
+    border-left: 1px solid rgba(black, 0.1);
+  }
 }
 
 $day-padding: 0.5rem;
@@ -105,22 +104,26 @@ $day-padding: 0.5rem;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-gap: 1px;
-  background-color: var(--color-border);
-
-  &:last-child > .Day:nth-last-child(7) > .Event {
-    border-bottom-left-radius: calc(var(--border-radius-large) - #{$day-padding}) !important;
-  }
-  &:last-child > .Day:last-child > .Event {
-    border-bottom-right-radius: calc(var(--border-radius-large) - #{$day-padding}) !important;
-  }
+  position: relative;
 }
 
 .Day {
   width: auto;
   aspect-ratio: 1;
-  background-color: var(--color-background-secondary);
   position: relative;
   padding: $day-padding;
+
+  &:not(:nth-child(7n + 1)) {
+    border-left: 1px solid rgba(black, 0.1);
+  }
+
+  &:not(:nth-child(-n + 7)) {
+    border-top: 1px solid rgba(black, 0.1);
+  }
+
+  &:hover {
+    background: rgba(white, 0.1);
+  }
 
   &.empty {
     border: none;
@@ -135,18 +138,16 @@ $day-padding: 0.5rem;
     font-weight: var(--font-weight-regular);
 
     &.light {
-      color: var(--color-text-light);
+      // color: var(--color-text-light);
     }
   }
 }
 
 .Event {
-  background-color: var(--color-primary);
-  border-radius: 1rem;
   font-size: calc(var(--font-size-small) - 0.2rem);
   height: 100%;
   padding: $day-padding;
-  color: var(--color-text-light);
+  border: 3px double rgba(black, 0.4);
 
   display: grid;
   align-content: center;
