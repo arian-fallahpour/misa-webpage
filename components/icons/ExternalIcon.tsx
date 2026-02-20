@@ -3,21 +3,8 @@ import type { SVGProps } from "react";
 
 export default function ExternalIcon(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="1.5rem"
-      height="1.5rem"
-      viewBox="0 0 24 24"
-      {...props}
-    >
-      <path
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M12 6H7a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-5m-6 0l7.5-7.5M15 3h6v6"
-      ></path>
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 8 8" {...props}>
+      <path fill="currentColor" d="M1 1v6h6V5h1v3H0V0h3v1m4 1L3 6L2 5l4-4H4V0h4v4H7"></path>
     </svg>
   );
 }

@@ -16,7 +16,7 @@ section.DancesSection {
   background: var(--color-background-secondary);
 
   position: relative;
-  padding: var(--width-large) 0;
+  padding: var(--width-large) var(--width-regular);
   padding-top: calc(var(--width-huge) + #{$padding-top});
   display: grid;
   gap: var(--width-huge);

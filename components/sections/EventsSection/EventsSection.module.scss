@@ -1,3 +1,5 @@
+@use "@/sass/abstracts/mixins" as *;
+
 section.EventsSection {
   padding-top: 15rem;
   padding-left: 0;
@@ -78,6 +80,11 @@ section.EventsSection {
   background: black;
 
   transition: filter 0.3s ease;
+
+  @include respond(500px) {
+    height: 20rem;
+    width: 35rem;
+  }
 
   &:hover,
   &:focus {

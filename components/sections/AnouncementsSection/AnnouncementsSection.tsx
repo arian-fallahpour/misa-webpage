@@ -12,6 +12,7 @@ import Link from "next/link";
 import FormIcon from "@/components/icons/FormIcon";
 import SocialIcon from "@/components/icons/SocialIcon";
 import Image from "next/image";
+import ExternalIcon from "@/components/icons/ExternalIcon";
 
 const links = [
   {
@@ -43,42 +44,50 @@ const AnnouncementsSection = () => {
 
   return (
     <Section className={classes.AnnouncementsSection}>
-      <StyledHeader>
-        <h1 className="header header-section">Announcements</h1>
-        <p className="paragraph">Here&apos;s what we&apos;ve been up to!</p>
-      </StyledHeader>
+      <Image className={classes.Background} src="/images/persia-4.jpeg" alt="ancient persia" fill />
+      <div className={classes.Header}>
+        <h1 className="header header-section">Announcements & Events</h1>
+        <p className="paragraph">Here&apos;s what we&apos;re up to!</p>
+      </div>
 
       <div className={classes.Main}>
         <div className={classes.Content}>
-          <h2 className="header header-card text-center">Important Links</h2>
-          <div className={classes.Links}>
-            {links.map((data) => (
-              <Link key={data.title} className={classes.Link} href={data.href}>
-                <data.Icon className={classes.LinkIcon} />
-                {data.title}
-              </Link>
-            ))}
+          <div className={classes.ContentBackground}>
+            <Image src="/images/paint-background.png" alt="paint background" fill />
           </div>
-        </div>
-        <div className={classes.Calendar}>
-          {/* <Image src="/images/map.jpg" alt="Map" className={classes.Image} fill /> */}
-
-          <div className={classes.CalendarContent}>
-            <div className={classes.CalendarHeader}>
-              <h3 className="header header-card">
-                {calendarData.months[month]} {year}
-              </h3>
-            </div>
-
-            <div className={classes.Weekdays}>
-              {calendarData.weekdays.map((day) => (
-                <div key={day} className={classes.Weekday}>
-                  {day}
-                </div>
+          <div className={classes.ContentMain}>
+            <h2 className="header header-card text-center">Important Links</h2>
+            <div className={classes.Links}>
+              {links.map((data) => (
+                <Link key={data.title} className={classes.Link} href={data.href}>
+                  <div className={classes.LinkInner}>{data.title}</div>
+                  <ExternalIcon className={classes.LinkIcon} />
+                </Link>
               ))}
             </div>
+          </div>
+        </div>
+        <div className={classes.Container}>
+          <div className={classes.Calendar}>
+            {/* <Image src="/images/map.jpg" alt="Map" className={classes.Image} fill /> */}
 
-            <CalendarDays />
+            <div className={classes.CalendarContent}>
+              <div className={classes.CalendarHeader}>
+                <h3 className="header header-card">
+                  {calendarData.months[month]} {year}
+                </h3>
+              </div>
+
+              <div className={classes.Weekdays}>
+                {calendarData.weekdays.map((day) => (
+                  <div key={day} className={classes.Weekday}>
+                    {day}
+                  </div>
+                ))}
+              </div>
+
+              <CalendarDays />
+            </div>
           </div>
         </div>
       </div>

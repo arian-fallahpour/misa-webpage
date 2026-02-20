@@ -1,7 +1,6 @@
 "use client";
 
 import Section from "@/components/elements/Section/Section";
-import React from "react";
 import classes from "./EventsSection.module.scss";
 
 import YearEvents from "./EventsYear";
