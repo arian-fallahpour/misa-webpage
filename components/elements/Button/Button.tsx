@@ -1,4 +1,4 @@
-import React, { ElementType, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { join } from "@/utils/helper-client";
 import classes from "./Button.module.scss";
 
@@ -7,7 +7,7 @@ import Link from "next/link";
 const Button = ({
   children,
   className,
-  innerClassName,
+
   variant = "",
   isLoading,
   isLink,
@@ -16,7 +16,6 @@ const Button = ({
 }: {
   children: ReactNode;
   className?: string;
-  innerClassName?: string;
   variant?: "" | "nav" | "glass" | "text" | "light";
   isLoading?: boolean;
   isLink?: boolean;

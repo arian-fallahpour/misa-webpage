@@ -1,5 +1,11 @@
+@use "@/sass/abstracts/mixins" as *;
+
 section.ExecutivesSection {
   padding-top: 10rem;
+
+  @include respond(550px) {
+    padding-top: 25rem;
+  }
 }
 
 .Executives {

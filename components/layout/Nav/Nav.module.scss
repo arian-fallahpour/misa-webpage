@@ -1,3 +1,5 @@
+@use "@/sass/abstracts/mixins" as *;
+
 .Nav {
   position: absolute;
   top: 0;
@@ -8,11 +10,19 @@
   display: flex;
   justify-content: space-between;
   padding: var(--width-small);
+
+  @include respond(550px) {
+    justify-content: unset;
+  }
 }
 
 .Left {
   display: flex;
   gap: var(--width-regular);
+
+  @include respond(550px) {
+    width: 100%;
+  }
 }
 
 .Logo {
@@ -25,17 +35,38 @@
   list-style: none;
 
   display: flex;
-  // gap: var(--width-small);
   align-items: center;
+
+  @include respond(550px) {
+    flex-direction: column;
+    position: absolute;
+
+    width: 100%;
+    top: 100%;
+  }
 }
 
 .Item {
 }
 
-.Link {
-}
-
 .Right {
   display: flex;
   align-items: center;
+}
+
+button.Toggle {
+  display: none;
+  aspect-ratio: 1;
+
+  @include respond(550px) {
+    display: block;
+  }
+}
+
+a.Join {
+  position: relative;
+
+  @include respond(550px) {
+    display: none;
+  }
 }
