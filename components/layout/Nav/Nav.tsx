@@ -51,7 +51,7 @@ const Nav = () => {
         <Button
           className={classes.Toggle}
           variant="light"
-          onClick={() => setIsListVisible(!isListVisible)}
+          onClick={() => (window.innerWidth < 550 ? setIsListVisible(!isListVisible) : null)}
         >
           <MenuIcon />
         </Button>
