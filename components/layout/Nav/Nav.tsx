@@ -9,7 +9,7 @@ import Image from "next/image";
 import MenuIcon from "@/components/icons/MenuIcon";
 
 const Nav = () => {
-  const [isListVisible, setIsListVisible] = useState(false);
+  const [isListVisible, setIsListVisible] = useState(true);
 
   return (
     <nav className={classes.Nav}>
@@ -26,17 +26,17 @@ const Nav = () => {
               </Button>
             </li>
             <li className={classes.Item}>
-              <Button variant="nav" href="/about-us" isLink>
+              <Button variant="nav" href="/about-us" onClick={() => setIsListVisible(false)} isLink>
                 About Us
               </Button>
             </li>
             <li className={classes.Item}>
-              <Button variant="nav" href="/events" isLink>
+              <Button variant="nav" href="/events" onClick={() => setIsListVisible(false)} isLink>
                 Events
               </Button>
             </li>
             <li className={classes.Item}>
-              <Button variant="nav" href="/our-team" isLink>
+              <Button variant="nav" href="/our-team" onClick={() => setIsListVisible(false)} isLink>
                 Our Team
               </Button>
             </li>

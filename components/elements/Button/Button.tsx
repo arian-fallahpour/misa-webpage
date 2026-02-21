@@ -2,27 +2,38 @@ import React, { ReactNode } from "react";
 import { join } from "@/utils/helper-client";
 import classes from "./Button.module.scss";
 
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
+
+export const buttonVariants = ["", "glass", "nav", "text", "light"] as const;
+export type ButtonVariantType = (typeof buttonVariants)[number];
+export type ButtonProps = {
+  children: React.ReactNode;
+  className?: string;
+  variant?: ButtonVariantType;
+};
+
+export type CustomLinkProps = ButtonProps &
+  Omit<LinkProps, keyof ButtonProps> &
+  Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof LinkProps | keyof ButtonProps> & {
+    isLink: true;
+    href: string;
+  };
+
+export type CustomButtonProps = ButtonProps &
+  Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof ButtonProps> & {
+    isLink?: false;
+  };
 
 const Button = ({
   children,
   className,
-
   variant = "",
-  isLoading,
   isLink,
-  href,
-  ...otherProps
-}: {
-  children: ReactNode;
-  className?: string;
-  variant?: "" | "nav" | "glass" | "text" | "light";
-  isLoading?: boolean;
-  isLink?: boolean;
-  href?: string;
-} & React.ComponentPropsWithoutRef<"button"> &
-  React.ComponentPropsWithoutRef<typeof Link>) => {
+  ...props
+}: CustomButtonProps | CustomLinkProps) => {
   if (isLink) {
+    const { href, ...otherProps } = props as CustomLinkProps;
+
     return (
       <Link
         className={join(
@@ -30,7 +41,6 @@ const Button = ({
           classes.Button,
           variant.length > 0 ? classes["Button--" + variant] : null,
         )}
-        disabled={isLoading}
         href={href}
         {...otherProps}
       >
@@ -39,6 +49,8 @@ const Button = ({
     );
   }
 
+  const buttonProps = props as CustomButtonProps;
+
   return (
     <button
       className={join(
@@ -46,8 +58,7 @@ const Button = ({
         classes.Button,
         variant.length > 0 ? classes["Button--" + variant] : null,
       )}
-      disabled={isLoading}
-      {...otherProps}
+      {...buttonProps}
     >
       {children}
     </button>

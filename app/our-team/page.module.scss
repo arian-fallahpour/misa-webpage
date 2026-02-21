@@ -33,7 +33,6 @@
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 
   @include respond(550px) {
-    height: 80rem;
   }
 }
 

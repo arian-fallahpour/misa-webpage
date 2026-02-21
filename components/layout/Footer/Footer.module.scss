@@ -1,3 +1,5 @@
+@use "@/sass/abstracts/mixins" as *;
+
 .Footer {
   padding: var(--width-huge) var(--width-large);
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
@@ -14,12 +16,22 @@
   &Content {
     display: flex;
     justify-content: space-between;
+    gap: var(--width-regular);
+
+    @include respond(600px) {
+      flex-direction: column;
+      justify-content: items;
+    }
   }
 
   &Contact {
     list-style: none;
     display: flex;
     gap: var(--width-regular);
+
+    @include respond(800px) {
+      flex-direction: column;
+    }
   }
 
   &Info {

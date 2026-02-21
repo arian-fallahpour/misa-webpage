@@ -40,9 +40,15 @@
   @include respond(550px) {
     flex-direction: column;
     position: absolute;
+    background-color: var(--color-primary);
 
     width: 100%;
-    top: 100%;
+    left: 0;
+
+    top: 0;
+    padding-top: 10rem;
+    padding-bottom: var(--width-regular);
+    z-index: -1;
   }
 }
 
