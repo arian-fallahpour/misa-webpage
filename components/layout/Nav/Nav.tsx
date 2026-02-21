@@ -21,22 +21,42 @@ const Nav = () => {
         {isListVisible && (
           <ul className={classes.List}>
             <li className={classes.Item}>
-              <Button variant="nav" href="/" isLink>
+              <Button
+                variant="nav"
+                href="/"
+                onClick={() => (window.innerWidth < 550 ? setIsListVisible(false) : null)}
+                isLink
+              >
                 Home
               </Button>
             </li>
             <li className={classes.Item}>
-              <Button variant="nav" href="/about-us" onClick={() => setIsListVisible(false)} isLink>
+              <Button
+                variant="nav"
+                href="/about-us"
+                onClick={() => (window.innerWidth < 550 ? setIsListVisible(false) : null)}
+                isLink
+              >
                 About Us
               </Button>
             </li>
             <li className={classes.Item}>
-              <Button variant="nav" href="/events" onClick={() => setIsListVisible(false)} isLink>
+              <Button
+                variant="nav"
+                href="/events"
+                onClick={() => (window.innerWidth < 550 ? setIsListVisible(false) : null)}
+                isLink
+              >
                 Events
               </Button>
             </li>
             <li className={classes.Item}>
-              <Button variant="nav" href="/our-team" onClick={() => setIsListVisible(false)} isLink>
+              <Button
+                variant="nav"
+                href="/our-team"
+                onClick={() => (window.innerWidth < 550 ? setIsListVisible(false) : null)}
+                isLink
+              >
                 Our Team
               </Button>
             </li>
@@ -51,7 +71,7 @@ const Nav = () => {
         <Button
           className={classes.Toggle}
           variant="light"
-          onClick={() => (window.innerWidth < 550 ? setIsListVisible(!isListVisible) : null)}
+          onClick={() => setIsListVisible(!isListVisible)}
         >
           <MenuIcon />
         </Button>
