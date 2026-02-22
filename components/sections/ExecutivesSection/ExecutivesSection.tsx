@@ -20,7 +20,13 @@ const Executive = ({
     <li className={classes.Executive}>
       <div className={classes.ExecutiveContent}>
         <Stamp className={classes.ExecutiveStamp} innerClassName={classes.ExecutiveStampInner}>
-          <Image src={imageSrc || "/images/team/blank.jpg"} alt={name} fill />
+          <Image
+            src={imageSrc || "/images/team/blank.jpg"}
+            alt={name}
+            sizes="(max-width: 500px) 35vw, (max-width: 800px) 25vw, 20vw"
+            // quality={50}
+            fill
+          />
           <div className={join(classes.ExecutiveName, "header-card")}>{name}</div>
         </Stamp>
         <div className={classes.ExecutiveRole}>{role}</div>

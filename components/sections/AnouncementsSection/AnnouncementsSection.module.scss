@@ -9,6 +9,10 @@ section.AnnouncementsSection {
   margin-top: -$bleed;
   padding-top: calc(#{$bleed} + #{$padding});
   padding-bottom: $padding;
+
+  @include respond(500px) {
+    padding-top: calc(#{$bleed} + #{$padding}/ 2);
+  }
 }
 
 .Background {
@@ -32,6 +36,7 @@ section.AnnouncementsSection {
   align-items: center;
 
   @include respond(900px) {
+    margin-top: 2rem;
     grid-template-columns: 1fr;
   }
 }

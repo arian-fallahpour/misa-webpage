@@ -1,3 +1,5 @@
+@use "@/sass/abstracts/mixins" as *;
+
 .Background {
   display: block;
   width: 100%;
@@ -13,5 +15,19 @@
     object-fit: cover;
     object-position: center 100%;
     opacity: 0.75;
+  }
+
+  & > :global(.header) {
+    display: none;
+    position: relative;
+
+    @include respond(950px) {
+      display: unset;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      text-shadow: 0 0 10px rgba(black, 0.2);
+    }
   }
 }

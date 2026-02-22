@@ -1,8 +1,14 @@
+@use "@/sass/abstracts/mixins" as *;
+
 .List {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   list-style: none;
+
+  @include respond(600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .Item {

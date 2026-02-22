@@ -1,8 +1,14 @@
+@use "@/sass/abstracts/mixins" as *;
+
 .Header {
   width: 100vw;
   height: 100vh;
   position: relative;
   z-index: 2;
+
+  @include respond(800px) {
+    height: 80vw;
+  }
 }
 
 .Image {
@@ -31,4 +37,21 @@
 
   display: grid;
   gap: var(--width-small);
+  padding: var(--width-regular);
+
+  @include respond(800px) {
+    top: 90%;
+  }
+
+  & > :global(.header) {
+    text-shadow: 0 0 1rem rgba(black, 0.6);
+
+    @include respond(800px) {
+      font-size: 5rem;
+    }
+
+    @include respond(500px) {
+      font-size: 4rem;
+    }
+  }
 }

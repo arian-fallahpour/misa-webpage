@@ -37,22 +37,40 @@
   display: flex;
   align-items: center;
 
+  transition: translate 0.3s ease;
+
   @include respond(550px) {
     flex-direction: column;
-    position: absolute;
     background-color: var(--color-primary);
 
+    position: absolute;
     width: 100%;
     left: 0;
-
     top: 0;
-    padding-top: 10rem;
-    padding-bottom: var(--width-regular);
+    translate: 0 -100%;
+    padding-top: 7rem;
+    padding-bottom: var(--width-small);
     z-index: -1;
+  }
+
+  &.visible {
+    @include respond(550px) {
+      translate: 0;
+    }
   }
 }
 
 .Item {
+  @include respond(550px) {
+    width: 100%;
+  }
+
+  & > * {
+    @include respond(550px) {
+      text-align: center;
+      justify-content: center;
+    }
+  }
 }
 
 .Right {
@@ -63,6 +81,18 @@
 button.Toggle {
   display: none;
   aspect-ratio: 1;
+  padding: 0;
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+
+  & svg {
+    font-size: 2.5rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
 
   @include respond(550px) {
     display: block;

@@ -17,6 +17,7 @@ section.AboutUsSection {
     grid-template-columns: auto;
     gap: var(--width-large);
     justify-items: center;
+    margin-top: calc(-1 * $bleed - 20rem);
   }
 }
 
@@ -29,19 +30,34 @@ section.AboutUsSection {
 
   & > :global(.paragraph) {
     flex: 1;
+
+    @include respond(950px) {
+      flex: unset;
+    }
   }
 
   @include respond(950px) {
     max-width: 60rem;
     width: 100%;
-    margin-top: 10rem;
-    height: 40rem;
+    margin-top: 5rem;
+    height: auto;
     text-align: center;
   }
 }
 
 .Main {
   flex: 1;
+
+  @include respond(950px) {
+    flex: unset;
+    margin-bottom: 1rem;
+  }
+
+  & > :global(.header) {
+    @include respond(950px) {
+      display: none;
+    }
+  }
 }
 
 .Background {
@@ -105,7 +121,7 @@ section.AboutUsSection {
     scale 0.2s ease-in-out,
     rotate 0.2s ease-in-out;
 
-  @include respond(950) {
+  @include respond(950px) {
     width: 25rem;
   }
 
@@ -158,6 +174,7 @@ section.AboutUsSection {
 
   @include respond(950px) {
     grid-template-columns: minmax(auto, 40rem);
+    margin-top: var(--width-large);
   }
 
   &Left {
@@ -194,6 +211,11 @@ section.AboutUsSection {
     left: 0;
     translate: -6rem -25%;
 
+    @include respond(950px) {
+      left: 50%;
+      translate: -50% -25%;
+    }
+
     & img {
       object-fit: contain;
     }
@@ -206,14 +228,20 @@ section.AboutUsSection {
     align-items: flex-start;
 
     @include respond(950px) {
-      margin-top: 10rem;
+      margin-top: 5rem;
       text-align: center;
       align-items: center;
       height: 30rem;
+      align-content: start;
     }
 
     & > :global(.paragraph) {
       flex: 1;
+
+      @include respond(950px) {
+        flex: unset;
+        margin-bottom: 1rem;
+      }
     }
   }
 }

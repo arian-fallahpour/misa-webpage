@@ -10,13 +10,21 @@ section.ExecutivesSection {
   gap: var(--width-regular);
   list-style: none;
   justify-content: center;
+
+  @include respond(400px) {
+    justify-content: space-around;
+  }
 }
 
 .Executive {
   width: clamp(25rem, 25rem, 30rem);
 
   @include respond(550px) {
-    width: clamp(20rem, 20rem, 25rem);
+    width: 20rem;
+  }
+
+  @include respond(400px) {
+    width: 17.5rem;
   }
 
   position: relative;
@@ -44,6 +52,11 @@ section.ExecutivesSection {
     @include respond(550px) {
       height: 20rem;
       width: 20rem;
+    }
+
+    @include respond(400px) {
+      height: 17.5rem;
+      width: 17.5rem;
     }
 
     &:hover,

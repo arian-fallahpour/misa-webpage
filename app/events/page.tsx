@@ -8,7 +8,7 @@ export default function EventsPage() {
   return (
     <Page>
       <div className={classes.Image}>
-        <Image src="/images/events/header.jpeg" alt="board game" fill />
+        <Image src="/images/events/header.jpeg" alt="board game" sizes="100wv" priority fill />
       </div>
       <div className={classes.Overlay}></div>
       <EventsSection />

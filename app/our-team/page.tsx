@@ -9,7 +9,7 @@ export default function OurTeamPage() {
     <Page>
       <span className={classes.Background} />
       <div className={classes.Image}>
-        <Image src="/images/team/header.jpg" alt="patterns" fill />
+        <Image src="/images/team/header.jpg" alt="patterns" sizes="100wv" priority fill />
       </div>
       <div className={classes.Overlay}></div>
       <ExecutivesSection />
