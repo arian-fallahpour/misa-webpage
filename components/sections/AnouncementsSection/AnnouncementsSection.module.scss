@@ -290,7 +290,7 @@ $day-padding: 0.5rem;
   translate: -50% -50%;
   width: calc(100% - 2 * #{$day-padding});
   height: calc(100% - 2 * #{$day-padding});
-  font-size: calc(var(--font-size-small) - 0.2rem);
+  font-size: calc(var(--font-size-small) - 0.5rem);
   padding: $day-padding;
   border: 3px double rgba(black, 0.4);
 
