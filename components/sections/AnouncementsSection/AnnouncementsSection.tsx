@@ -2,8 +2,6 @@
 
 import classes from "./AnnouncementsSection.module.scss";
 
-import StyledHeader from "@/components/elements/StyledHeader/StyledHeader";
-
 import Section from "@/components/elements/Section/Section";
 
 import CalendarDays from "../AnouncementsSection/CalendarDays";

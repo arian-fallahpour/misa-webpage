@@ -3,11 +3,11 @@ import classes from "./AnnouncementsSection.module.scss";
 import Image from "next/image";
 
 const events = [
-  { date: "2026-01-15", title: "Board Game Night", imageSrc: null },
-  { date: "2026-01-20", title: "Movie Screening", imageSrc: null },
-  { date: "2026-01-25", title: "Dance Workshop", imageSrc: null },
-  { date: "2026-02-14", title: "Valentine's Social", imageSrc: null },
-  { date: "2026-02-22", title: "Culture Night", imageSrc: null },
+  { date: "2026-02-05", title: "Vigil at MUSC", imageSrc: null },
+  { date: "2026-02-10", title: "HEAS x MISA", imageSrc: null },
+  { date: "2026-02-24", title: "General Member Meeting", imageSrc: null },
+  { date: "2026-03-03", title: "MISA x SWC Cooking Class", imageSrc: null },
+  { date: "2026-03-20", title: "Norouz", imageSrc: null },
 ];
 
 const CalendarDays = () => {
