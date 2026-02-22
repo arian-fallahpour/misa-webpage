@@ -7,6 +7,10 @@ section.DancesSection {
 
   padding-bottom: 0;
   padding-top: 0;
+
+  @include respond(450px) {
+    padding: 0;
+  }
 }
 
 .Container {
@@ -22,6 +26,11 @@ section.DancesSection {
   gap: var(--width-huge);
 
   clip-path: polygon(0 #{$padding-top}, 100% 0, 100% 100%, 0 100%);
+
+  @include respond(450px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .Background {
