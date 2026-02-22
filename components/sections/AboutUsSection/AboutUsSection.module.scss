@@ -1,17 +1,18 @@
 @use "@/sass/abstracts/mixins" as *;
 
 section.AboutUsSection {
+  $bleed: 15rem;
+
   @include max-width();
 
   display: grid;
   gap: inherit;
   grid-template-columns: repeat(2, 1fr);
 
-  $bleed: 15rem;
-
   margin-top: -$bleed;
   padding-top: calc(#{$bleed} + var(--width-large));
   padding-bottom: calc(2 * var(--width-large));
+  overflow: hidden;
 
   @include respond(950px) {
     grid-template-columns: auto;

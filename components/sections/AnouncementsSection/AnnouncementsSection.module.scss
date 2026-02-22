@@ -283,8 +283,13 @@ $day-padding: 0.5rem;
 }
 
 .Event {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: calc(100% - 2 * #{$day-padding});
+  height: calc(100% - 2 * #{$day-padding});
   font-size: calc(var(--font-size-small) - 0.2rem);
-  height: 100%;
   padding: $day-padding;
   border: 3px double rgba(black, 0.4);
 

@@ -16,8 +16,9 @@ const AboutUsSection = () => {
         <div className={classes.Main}>
           <h2 className="header header-section margin-bottom-auto">About Us</h2>
           <p className="paragraph margin-bottom-auto">
-            MISA is a student-led organization dedicated to celebrating the persian culture and
-            fostering a sense of community among students interested in Iran&apos;s rich heritage.
+            MISA is a student-led, non-profit organization dedicated to celebrating the persian
+            culture and fostering a sense of community among students interested in Iran&apos;s rich
+            heritage.
           </p>
           <p className="paragraph margin-bottom-auto">
             We organize cultural events, social gatherings, and educational workshops to promote

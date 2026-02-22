@@ -44,14 +44,7 @@ const CalendarDays = () => {
         key={`${year}-${month}-${day}`}
         className={join(classes.Day, isToday ? classes.today : null)}
       >
-        {event && (
-          <div className={classes.Event}>
-            {event.imageSrc && (
-              <Image src={event.imageSrc} alt={event.title} className={classes.EventImage} />
-            )}
-            {event.title}
-          </div>
-        )}
+        {event && <div className={classes.Event}>{event.title}</div>}
         <span className={join(classes.DayNumber, event ? classes.light : null)}>{day}</span>
       </div>,
     );

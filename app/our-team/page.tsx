@@ -3,8 +3,13 @@ import AlumniSection from "@/components/sections/AlumniSection/AlumniSection";
 import ExecutivesSection from "@/components/sections/ExecutivesSection/ExecutivesSection";
 import classes from "./page.module.scss";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 export default function OurTeamPage() {
+  return redirect("/");
+
+  // Temporarily redirecting until iran situation calms down
+
   return (
     <Page>
       <span className={classes.Background} />
