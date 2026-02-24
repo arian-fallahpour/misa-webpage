@@ -7,7 +7,14 @@ const Header = () => {
   return (
     <header className={classes.Header}>
       <div className={classes.Image}>
-        <Image src="/images/header-3.jpeg" alt="MISA Logo" sizes="100wv" priority fill />
+        <Image
+          src="/images/header-3.jpeg"
+          alt="MISA Logo"
+          sizes="100wv"
+          quality={75}
+          priority
+          fill
+        />
       </div>
       <div className={classes.Overlay}></div>
       <div className={classes.Content}>
