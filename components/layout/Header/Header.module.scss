@@ -2,6 +2,7 @@
 
 .Header {
   width: 100vw;
+  // height: 50rem;
   height: 100vh;
   position: relative;
   z-index: 2;
@@ -11,7 +12,8 @@
   }
 }
 
-.Image {
+.Image,
+.Overlay {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -19,7 +21,12 @@
   top: 50%;
   translate: -50% -50%;
   overflow: hidden;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  // clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  // clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+
+  mask-image: url("/images/paint-background-3.png");
+  mask-position: bottom;
+  mask-size: 130% 120%;
 
   & > img {
     object-fit: cover;
@@ -27,9 +34,14 @@
   }
 }
 
+.Overlay {
+  background: rgba(black, 0.3);
+}
+
 .Content {
   position: absolute;
-  top: 72%;
+  top: 50%;
+  // top: 72%; // uncomment once we can add the main image back
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 60rem;
@@ -40,7 +52,7 @@
   padding: var(--width-regular);
 
   @include respond(800px) {
-    top: 80%;
+    // top: 80%; // uncomment once we can add the main image back
   }
 
   & > :global(.header) {

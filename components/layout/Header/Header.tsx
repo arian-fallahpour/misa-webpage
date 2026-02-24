@@ -7,8 +7,9 @@ const Header = () => {
   return (
     <header className={classes.Header}>
       <div className={classes.Image}>
-        <Image src="/images/header-1.jpeg" alt="MISA Logo" sizes="100wv" priority fill />
+        <Image src="/images/header-3.jpeg" alt="MISA Logo" sizes="100wv" priority fill />
       </div>
+      <div className={classes.Overlay}></div>
       <div className={classes.Content}>
         <h1 className="header header-title text-light text-center">{infoData.name}</h1>
         {/* <p className="paragraph text-light text-center">
