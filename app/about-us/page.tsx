@@ -7,7 +7,14 @@ export default function AboutUsPage() {
   return (
     <Page>
       <div className={classes.Background}>
-        <Image src="/images/about/header-1.jpg" alt="board game" sizes="100wv" priority fill />
+        <Image
+          src="/images/about-1.webp"
+          alt="board game"
+          sizes="100wv"
+          quality={75}
+          priority
+          fill
+        />
         <h1 className="header header-title text-light">About Us</h1>
       </div>
       <AboutUsSection />

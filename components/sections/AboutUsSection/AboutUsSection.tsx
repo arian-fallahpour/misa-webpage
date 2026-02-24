@@ -11,7 +11,7 @@ import Stamp from "@/components/elements/Stamp/Stamp";
 const AboutUsSection = () => {
   return (
     <Section className={classes.AboutUsSection}>
-      <Image className={classes.Background} src="/images/cyrus.avif" alt="cyrus the great" fill />
+      <Image className={classes.Background} src="/images/cyrus.webp" alt="cyrus the great" fill />
       <div className={classes.Left}>
         <div className={classes.Main}>
           <h2 className="header header-section margin-bottom-auto">About Us</h2>

@@ -42,7 +42,7 @@ const AnnouncementsSection = () => {
 
   return (
     <Section className={classes.AnnouncementsSection}>
-      <Image className={classes.Background} src="/images/persia-4.jpeg" alt="ancient persia" fill />
+      <Image className={classes.Background} src="/images/persia-4.webp" alt="ancient persia" fill />
       <div className={classes.Header}>
         <h1 className="header header-section">Announcements & Events</h1>
         <p className="paragraph">Here&apos;s what we&apos;re up to!</p>
