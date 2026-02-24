@@ -58,6 +58,10 @@ const noto = localFont({
 export const metadata: Metadata = {
   title: "Official MISA Website",
   description: "Website for the McMaster Iranian Student Association.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
