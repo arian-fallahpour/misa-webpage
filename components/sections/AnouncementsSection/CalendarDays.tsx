@@ -7,7 +7,8 @@ const events = [
   { date: "2026-02-10", title: "HEAS x MISA", imageSrc: null },
   { date: "2026-02-24", title: "General Member Meeting", imageSrc: null },
   { date: "2026-03-03", title: "MISA x SWC Cooking Class", imageSrc: null },
-  { date: "2026-03-20", title: "Norouz", imageSrc: null },
+  { date: "2026-03-18", title: "Stem Cell Drive and DEN Event", imageSrc: null },
+  { date: "2026-03-24", title: "MISA Norouz Event", imageSrc: null },
 ];
 
 const CalendarDays = () => {
