@@ -34,6 +34,12 @@
   }
 }
 
+.Image {
+  // Matches the hero image's average tone so there is no flash or
+  // paint-in reveal while it loads.
+  background-color: rgb(174, 171, 155);
+}
+
 .Overlay {
   background: rgba(black, 0.4);
 }

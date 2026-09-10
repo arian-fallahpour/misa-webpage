@@ -10,9 +10,10 @@ const Header = () => {
         <Image
           src="/images/header-3.jpeg"
           alt="MISA Logo"
-          sizes="100wv"
+          sizes="100vw"
           quality={75}
           priority
+          fetchPriority="high"
           fill
         />
       </div>
