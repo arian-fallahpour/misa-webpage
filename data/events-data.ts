@@ -1,5 +1,5 @@
 import norouz_2026 from "@/public/images/events/2025-2026/norouz.jpeg";
-import vigil from "@/public/images/events/2025-2026/vigil.jpeg";
+// import vigil from "@/public/images/events/2025-2026/vigil.jpeg";
 import misa_heas from "@/public/images/events/2025-2026/misa_heas.jpeg";
 import shabe_yalda_2025 from "@/public/images/events/2025-2026/shabe_yalda.jpg";
 import dorehami from "@/public/images/events/2025-2026/dorehami.jpeg";
@@ -28,12 +28,12 @@ const eventsYearData: EventsYearType[] = [
         imageSrc: norouz_2026,
         href: "https://drive.google.com/drive/folders/19itnFi0-iYJ2IM2hhVfJhzysjECP-c2p?usp=sharing",
       },
-      {
-        name: "Vigil for Killed Protesters",
-        nameFarsi: "مراسم",
-        imageSrc: vigil,
-        href: "https://drive.google.com/drive/folders/1Dn9e5MMdFhmucZuBfIrPq7DB131r9AvT?usp=sharing",
-      },
+      // {
+      //   name: "Vigil for Killed Protesters",
+      //   nameFarsi: "مراسم",
+      //   imageSrc: vigil,
+      //   href: "https://drive.google.com/drive/folders/1Dn9e5MMdFhmucZuBfIrPq7DB131r9AvT?usp=sharing",
+      // },
       {
         name: "MISA x HEAS",
         nameFarsi: "مراسم مشترک",

@@ -1,4 +1,13 @@
 const alumniData = [
+  "Asal Alavi Parsi",
+  "Shayan Mirmirani",
+  "Arya Reihani",
+  "Viona Kouhi",
+  "Maneli Moghadam",
+  "Bahar Alasti",
+  "Negar Halabian",
+  "Nikou Zahedi",
+  "Donna Mahboubi",
   "Yalda Azari",
   "Amirmasood Shojaee",
   "Sarina Badre Rajaei",

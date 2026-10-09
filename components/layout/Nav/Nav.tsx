@@ -50,8 +50,7 @@ const Nav = () => {
               Events
             </Button>
           </li>
-          {/* Temporarily removed until iran situation calms down */}
-          {/* <li className={classes.Item}>
+          <li className={classes.Item}>
             <Button
               variant="nav"
               href="/our-team"
@@ -60,7 +59,7 @@ const Nav = () => {
             >
               Our Team
             </Button>
-          </li> */}
+          </li>
         </ul>
       </div>
       <div className={classes.Right}>
